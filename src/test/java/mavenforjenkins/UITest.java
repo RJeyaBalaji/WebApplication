@@ -12,9 +12,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class UITest 
 {
 
-	@Parameters("Browser")
+	
 	@Test
-	public void startBrowser(String browserName)
+	@Parameters("Browser")
+	public void startBrowser(@Optional("chrome") String browserName)
 	{
 		System.out.println("Parameter value is "+browserName);
 		WebDriver driver=null;
